@@ -2,7 +2,10 @@ name: 'Terraform EKS Destroy'
 
 on:
   workflow_dispatch:
-
+  pull_request:
+    types: [opened]
+    branches: [main]
+    
 permissions:
   contents: read
   pull-requests: write
